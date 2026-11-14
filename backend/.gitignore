@@ -1,0 +1,157 @@
+
+# ============================================================
+# ESTAÇÃO METEOROLÓGICA IoT — BACKEND
+# ============================================================
+#
+# Arquivo: .gitignore
+#
+# Responsabilidades:
+# - Ignorar arquivos temporários do Gradle.
+# - Evitar a publicação de arquivos compilados.
+# - Ignorar configurações locais das IDEs.
+# - Proteger credenciais e arquivos de ambiente.
+# - Manter o repositório GitHub organizado.
+#
+# ============================================================
+
+
+# ============================================================
+# GRADLE
+# ============================================================
+
+# Arquivo de ajuda gerado no projeto Spring Boot.
+HELP.md
+
+# Cache e arquivos gerados pelo Gradle.
+.gradle
+.gradle/
+
+# Diretórios de compilação.
+build/
+**/build/
+
+# Preserva o executável JAR do Gradle Wrapper.
+!gradle/wrapper/gradle-wrapper.jar
+
+# Exceções originais para diretórios dentro de src.
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+
+# ============================================================
+# SPRING TOOL SUITE (STS)
+# ============================================================
+
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# Diretórios de saída da compilação.
+bin/
+
+# Exceções originais.
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+
+# ============================================================
+# INTELLIJ IDEA / ANDROID STUDIO
+# ============================================================
+
+# Configurações locais do ambiente de desenvolvimento.
+.idea
+.idea/
+
+# Arquivos de projeto e módulos da IDE.
+*.iws
+*.iml
+*.ipr
+
+# Diretório de saída da IDE.
+out/
+
+# Exceções originais.
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+
+# ============================================================
+# NETBEANS
+# ============================================================
+
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+
+# ============================================================
+# VISUAL STUDIO CODE
+# ============================================================
+
+# Configurações locais do editor.
+.vscode/
+
+
+# ============================================================
+# KOTLIN
+# ============================================================
+
+# Arquivos locais e caches gerados pelo Kotlin.
+.kotlin
+.kotlin/
+
+
+# ============================================================
+# CREDENCIAIS E CONFIGURAÇÕES LOCAIS
+# ============================================================
+#
+# Impede a publicação acidental de:
+# - Configurações reais de conexão PostgreSQL.
+# - Senhas e credenciais MQTT.
+# - Variáveis de ambiente locais.
+# - Arquivos particulares de configuração.
+#
+# IMPORTANTE:
+# O application.properties operacional fica ignorado.
+# Um exemplo sem credenciais pode ser publicado
+# separadamente para documentar a configuração.
+# ============================================================
+
+application.properties
+
+# Arquivos de variáveis de ambiente.
+.env
+.env.*
+
+# Configurações locais de desenvolvimento.
+local.properties
+
+# Diretórios locais relacionados à configuração
+# do cliente MQTT, conforme a regra original.
+backend_estacao_meteorologica-*/
+
+
+# ============================================================
+# OUTROS ARQUIVOS SENSÍVEIS
+# ============================================================
+
+# Arquivos alternativos de credenciais.
+secrets.properties
+mqtt.properties
+
+# Chaves e certificados privados.
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Logs locais.
+*.log

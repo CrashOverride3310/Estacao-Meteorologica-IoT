@@ -1,0 +1,64 @@
+
+# ============================================================
+# ESTAÇÃO METEOROLÓGICA IoT — BACKEND
+# Exemplo de configuração do Spring Boot
+# ============================================================
+#
+# Copie este arquivo para application.properties
+# e configure as variáveis de ambiente necessárias.
+#
+# Não publique senhas ou credenciais reais no GitHub.
+# ============================================================
+
+# Identificação da aplicação
+spring.application.name=estacao-backend
+
+
+# ============================================================
+# POSTGRESQL
+# ============================================================
+
+# URL JDBC do banco de dados PostgreSQL
+spring.datasource.url=${DB_URL}
+
+# Usuário do banco
+spring.datasource.username=${DB_USERNAME}
+
+# Senha do banco
+spring.datasource.password=${DB_PASSWORD}
+
+
+# ============================================================
+# JPA / HIBERNATE
+# ============================================================
+
+# Atualização automática do esquema
+spring.jpa.hibernate.ddl-auto=update
+
+# Exibição das consultas SQL
+spring.jpa.show-sql=true
+
+# Formatação das consultas SQL
+spring.jpa.properties.hibernate.format_sql=true
+
+
+# ============================================================
+# MQTT — HIVEMQ CLOUD
+# ============================================================
+
+# Endereço do broker MQTT, incluindo protocolo e porta
+# Exemplo: ssl://seu-broker.hivemq.cloud:8883
+mqtt.broker-url=${MQTT_BROKER_URL}
+
+# Identificador do cliente MQTT
+mqtt.client-id=backend_estacao_meteorologica
+
+# Credenciais do broker
+mqtt.username=${MQTT_USERNAME}
+mqtt.password=${MQTT_PASSWORD}
+
+# Tópico das leituras meteorológicas
+mqtt.topic=estacao/meteorologica/dados
+
+# Tópico das coordenadas GPS enviadas pelo App2
+mqtt.location-topic=estacao/localizacao
