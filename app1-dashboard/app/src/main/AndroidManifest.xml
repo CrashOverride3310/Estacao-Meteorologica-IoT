@@ -1,0 +1,103 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    AndroidManifest.xml
+
+    Arquivo de configuração principal do App1 da Estação Meteorológica IoT.
+
+    Define as permissões necessárias para acessar a internet,
+    as configurações gerais do aplicativo e a Activity inicial.
+
+    O App1 utiliza a internet para consultar o backend por meio
+    de uma API REST e carregar o mapa da localização da estação.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Permite realizar conexões com a internet.
+
+        Necessária para consultar os dados meteorológicos,
+        receber a localização GPS do backend e carregar
+        os mapas utilizados pelo dashboard.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+        Permite consultar informações sobre o estado
+        da conectividade de rede do dispositivo Android.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+        Configurações gerais do aplicativo.
+
+        allowBackup: permite backup dos dados do aplicativo.
+
+        usesCleartextTraffic: autoriza tráfego HTTP sem criptografia.
+        Mantido conforme a configuração original do projeto.
+
+        dataExtractionRules: define regras de extração de dados.
+
+        fullBackupContent: define regras de backup.
+
+        icon e roundIcon: identificam os ícones do aplicativo.
+
+        label: define o nome exibido ao usuário.
+
+        supportsRtl: permite suporte a layouts da direita para a esquerda.
+
+        theme: define o tema visual utilizado pelo aplicativo.
+    -->
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EstacaoMeteorologica">
+
+        <!--
+            MainActivity
+
+            Activity principal do aplicativo, responsável
+            por iniciar a interface do dashboard meteorológico.
+
+            android:exported="true" permite que a Activity
+            seja iniciada por outros componentes autorizados
+            do sistema Android, incluindo o launcher.
+
+            windowSoftInputMode="adjustResize" configura
+            o redimensionamento da janela quando o teclado
+            virtual é exibido.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.EstacaoMeteorologica"
+            android:windowSoftInputMode="adjustResize">
+
+            <!--
+                Identifica a MainActivity como ponto
+                de entrada principal do aplicativo.
+
+                MAIN: indica a atividade inicial.
+
+                LAUNCHER: permite que o aplicativo apareça
+                na lista de aplicativos do dispositivo Android.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

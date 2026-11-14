@@ -1,0 +1,76 @@
+
+# ============================================================
+# Estação Meteorológica IoT — App1 Dashboard Android
+#
+# Arquivos e diretórios ignorados pelo Git.
+# Evita publicar configurações locais, caches, arquivos
+# temporários e resultados de compilação.
+# ============================================================
+
+# Arquivos de configuração de módulos do IntelliJ/Android Studio.
+*.iml
+
+# Cache e arquivos temporários do Gradle.
+.gradle
+
+# Configuração local do Android SDK.
+/local.properties
+
+# Arquivos internos do Android Studio.
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Arquivos adicionais de configurações locais do Android Studio.
+/.idea/shelf/
+/.idea/tasks.xml
+/.idea/usage.statistics.xml
+/.idea/dictionaries/
+
+# Arquivos de sistema gerados pelo macOS.
+.DS_Store
+
+# Resultados de compilação do projeto.
+/build
+
+# Capturas geradas por ferramentas de desenvolvimento.
+/captures
+
+# Arquivos temporários de compilação nativa.
+.externalNativeBuild
+.cxx
+
+# Ignora arquivos local.properties em subdiretórios.
+local.properties
+
+# ============================================================
+# Proteções adicionais para publicação no GitHub
+# ============================================================
+
+# Resultados de compilação de qualquer módulo Android.
+**/build/
+
+# Arquivos locais de variáveis de ambiente.
+.env
+.env.*
+!.env.example
+
+# Arquivos de assinatura de aplicativos Android.
+*.jks
+*.keystore
+
+# Configurações locais que possam conter credenciais.
+secrets.properties
+mqtt.properties
+
+# Arquivos de log.
+*.log
+
+# Configurações locais do Android Studio.
+.idea/
+
+# Cache local do Kotlin.
+.kotlin/
