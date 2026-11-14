@@ -1,0 +1,68 @@
+
+# ============================================================
+# Estação Meteorológica IoT — App2 LocalizacaoGPS
+#
+# Arquivos e diretórios ignorados pelo Git.
+#
+# Impede o versionamento de caches, configurações locais,
+# arquivos compilados e possíveis credenciais MQTT.
+# ============================================================
+
+# Arquivos de configuração de módulos do Android Studio.
+*.iml
+
+# Cache e arquivos temporários do Gradle.
+.gradle
+
+# Configuração local do Android SDK.
+/local.properties
+
+# Arquivos internos e configurações locais do Android Studio.
+.idea/
+
+# Arquivos de sistema gerados pelo macOS.
+.DS_Store
+
+# Resultados de compilação do projeto.
+/build
+
+# Capturas geradas pelas ferramentas de desenvolvimento.
+/captures
+
+# Arquivos temporários de compilação nativa.
+.externalNativeBuild
+.cxx
+
+# Ignora arquivos local.properties também em subdiretórios.
+local.properties
+
+# ============================================================
+# PROTEÇÃO DE ARQUIVOS LOCAIS E CREDENCIAIS
+# ============================================================
+
+# Cache local do compilador Kotlin.
+.kotlin/
+
+# Resultados de compilação de qualquer módulo Android.
+**/build/
+
+# Arquivos de variáveis de ambiente.
+.env
+.env.*
+
+# Permite publicar modelos de configuração sem credenciais.
+!.env.example
+
+# Arquivo local que pode armazenar credenciais MQTT.
+# Não deve ser publicado no GitHub.
+mqtt.properties
+
+# Arquivos adicionais que podem conter senhas ou tokens.
+secrets.properties
+
+# Arquivos de assinatura de aplicativos Android.
+*.jks
+*.keystore
+
+# Arquivos de log gerados durante a execução.
+*.log

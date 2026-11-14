@@ -1,0 +1,113 @@
+
+# ============================================================
+# Estação Meteorológica IoT — App2 LocalizacaoGPS
+#
+# Catálogo de versões do Gradle (Version Catalog).
+#
+# Centraliza as versões das bibliotecas e dos plugins
+# utilizados pelo aplicativo Android.
+#
+# As dependências declaradas neste arquivo podem ser
+# acessadas pelo build.gradle.kts por meio do objeto "libs".
+# ============================================================
+
+
+# ============================================================
+# VERSÕES DAS BIBLIOTECAS E PLUGINS
+# ============================================================
+
+[versions]
+
+# Android Gradle Plugin (AGP).
+# Responsável por integrar a compilação Android ao Gradle.
+agp = "9.4.1"
+
+# AndroidX Core KTX.
+# Fornece extensões Kotlin para funcionalidades do Android.
+coreKtx = "1.19.1"
+
+# JUnit 4, utilizado na execução de testes unitários.
+junit = "4.13.2"
+
+# Extensão AndroidX do JUnit para testes instrumentados.
+junitVersion = "1.3.0"
+
+# Espresso, utilizado para testes de interface Android.
+espressoCore = "3.7.0"
+
+# AndroidX Lifecycle Runtime KTX.
+# Integra recursos Kotlin ao ciclo de vida dos componentes Android.
+lifecycleRuntimeKtx = "2.11.0"
+
+# Activity Compose.
+# Permite integrar o Jetpack Compose às Activities Android.
+activityCompose = "1.13.0"
+
+# Versão do Kotlin utilizada pelo plugin Compose.
+kotlin = "2.2.10"
+
+# BOM (Bill of Materials) do Jetpack Compose.
+# Gerencia versões compatíveis das bibliotecas Compose.
+composeBom = "2026.02.01"
+
+
+# ============================================================
+# BIBLIOTECAS UTILIZADAS PELO APLICATIVO
+# ============================================================
+
+[libraries]
+
+# Biblioteca AndroidX Core com extensões Kotlin.
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+# Framework de testes unitários JUnit.
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+# Integração do JUnit com testes instrumentados Android.
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+
+# Biblioteca Espresso para automatização de testes de interface.
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# Recursos para gerenciamento do ciclo de vida Android.
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# Integração entre Activity Android e Jetpack Compose.
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+
+# Gerenciamento das versões das bibliotecas Jetpack Compose.
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
+# Componentes fundamentais da interface Jetpack Compose.
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+
+# Recursos gráficos utilizados pela interface Compose.
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+
+# Ferramentas de inspeção e depuração da interface Compose.
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+
+# Permite visualizar componentes Compose no Android Studio.
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+# Recursos auxiliares para testes da interface Compose.
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
+# Integração de testes Compose com JUnit4.
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+# Biblioteca de componentes visuais Material Design 3.
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+
+# ============================================================
+# PLUGINS DO GRADLE
+# ============================================================
+
+[plugins]
+
+# Plugin responsável pela compilação do aplicativo Android.
+android-application = { id = "com.android.application", version.ref = "agp" }
+
+# Plugin Kotlin utilizado para compilar interfaces Jetpack Compose.
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
