@@ -20,9 +20,6 @@
 #
 # Esta biblioteca é utilizada pelo arquivo main.py.
 #
-# IMPORTANTE:
-# Foram preservados os cálculos e as configurações
-# da implementação original do projeto.
 # =========================================================
 
 
@@ -118,7 +115,7 @@ class BMP280:
         chip_id = self._read_byte(0xD0)
 
         # Verifica os identificadores aceitos
-        # pela implementação original.
+        # pelo driver BMP280.
         if chip_id not in (0x58, 0x60):
             raise OSError("Sensor não reconhecido")
 

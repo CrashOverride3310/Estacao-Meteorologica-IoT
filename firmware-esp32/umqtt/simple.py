@@ -22,8 +22,6 @@
 #
 # Protocolo utilizado: MQTT 3.1.1.
 #
-# Os procedimentos e cálculos originais
-# foram preservados nesta versão comentada.
 # =========================================================
 
 
@@ -438,8 +436,7 @@ class MQTTClient:
     # qos:
     # Parâmetro recebido pela interface de publicação.
     #
-    # IMPORTANTE:
-    # Esta implementação original transmite o pacote
+    # O método transmite o pacote
     # com o byte fixo 0x30, correspondente a PUBLISH
     # com QoS 0 e retain desativado.
     #
@@ -474,7 +471,6 @@ class MQTTClient:
         # Calcula o byte de controle MQTT
         # considerando os parâmetros recebidos.
         #
-        # Mantido conforme o código original.
         packet.append(
             0x30
             | (qos << 1)
